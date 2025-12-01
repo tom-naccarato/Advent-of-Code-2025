@@ -1,17 +1,12 @@
-def left_rotate(current_number,n):
-    # Modulo 100 to wrap around dial
-    return (current_number - n) % 100
-
-def right_rotate(current_number,n):
-    # Modulo 100 to wrap around dial (100 is equivalent to 0)
-    return (current_number + n) % 100
+import os
+from util import left_rotate, right_rotate
 
 def main():
     # Dial starts at 50
     current_number = 50
     password = 0
     
-    with open("Day 1/input.txt", "r") as file:
+    with open(os.path.join(os.path.dirname(__file__), "input.txt"), "r") as file:
         for line in file:
             # Read direction and number of steps
             direction = line[0]
