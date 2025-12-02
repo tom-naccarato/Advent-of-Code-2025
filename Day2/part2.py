@@ -6,7 +6,7 @@ def is_repeating(id_str):
     n = len(id_str)
     # Try all possible substring lengths from 1 to n//2
     for length in range(1, n // 2 + 1):
-        if n % length == 0:
+        if n % length == 0: # Length must divide n evenly to form repeating pattern
             substring = id_str[:length]
             # Check if repeating this substring creates the full id
             if substring * (n // length) == id_str:
