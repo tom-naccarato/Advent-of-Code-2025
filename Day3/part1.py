@@ -1,10 +1,8 @@
 import os
 
+from utils import parse_input
 
-def parse_input(file_path:str) -> list[str]:
-    with open(file_path, 'r') as f:
-        return f.readlines()
-    
+
 def find_highest_number_in_line(nums):
     """Start at the right hand side and find the highest two digit number that can be made."""
     # Start at second last index and move to the left
